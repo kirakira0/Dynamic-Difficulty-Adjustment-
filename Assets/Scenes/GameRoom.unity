@@ -318,7 +318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150389534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -8.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1980818142}
@@ -426,7 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289815161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -11.5, z: -126.549286}
+  m_LocalPosition: {x: -0.02, y: -11.5, z: 182}
   m_LocalScale: {x: 15.585123, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -585,7 +585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152008401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.75, y: -2.32, z: 0}
+  m_LocalPosition: {x: -4.75, y: -9.64, z: 0}
   m_LocalScale: {x: 0.42241898, y: 0.42241898, z: 0.42241898}
   m_Children: []
   m_Father: {fileID: 0}
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: {x: 0, y: 0, z: 0}
-  dash: {x: 0, y: 0, z: 0}
+  stop: {x: 0, y: 0, z: 0}
   jumpForce: 4
   isGrounded: 1
 --- !u!1 &1334411114
@@ -641,7 +641,7 @@ MonoBehaviour:
   distanceBetween: 5
   platformWidth: 0
   timeBeforeInitSpawn: 0
-  timeBetweenSpawns: 2
+  timeBetweenSpawns: 1
 --- !u!4 &1334411116
 Transform:
   m_ObjectHideFlags: 0
@@ -707,7 +707,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426261373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.06, y: 0.814936, z: -126.549286}
+  m_LocalPosition: {x: -11.06, y: 0.814936, z: 182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
