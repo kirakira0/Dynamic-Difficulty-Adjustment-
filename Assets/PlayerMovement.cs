@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move() {
         //jump
-        if (Input.GetKeyDown(KeyCode.UpArrow) && touchingFloor) {
+        if (Input.GetKeyDown(KeyCode.Z) && touchingFloor) {
             my_rigidbody2d.velocity = new Vector2(my_rigidbody2d.velocity.x, jumpForce);  
         }
         //move right
