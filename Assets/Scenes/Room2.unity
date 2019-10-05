@@ -320,7 +320,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &223624094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -362,6 +362,8 @@ MonoBehaviour:
   jumpForce: 15
   walkSpd: 8
   sprintSpd: 8
+  dashDuration: 1
+  dashStoppingSpeed: 0.1
 --- !u!1 &1140237639
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,8 +676,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099819798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.003, y: -4.536, z: -10}
-  m_LocalScale: {x: 6.204071, y: 0.6114433, z: 1}
+  m_LocalPosition: {x: 62.98, y: -4.536, z: -10}
+  m_LocalScale: {x: 62.164795, y: 0.6114433, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
