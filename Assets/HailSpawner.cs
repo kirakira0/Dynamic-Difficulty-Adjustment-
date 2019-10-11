@@ -15,7 +15,7 @@ public class HailSpawner : MonoBehaviour
             //for (int i = 0; i < 10; i++) {
                 Random rnd = new Random();
                 //Instantiate(hail, new Vector3(i * Random.Range(0f, 5f), Random.Range(0f, 2f), 0), Quaternion.identity);
-                Instantiate(hail, new Vector3(transform.position.x + 5f, transform.position.y, transform.position.z), Quaternion.identity);
+                Instantiate(hail, new Vector3(transform.position.x + Random.Range(-5f, 5f), transform.position.y, transform.position.z), Quaternion.identity);
             //} 
         }
     }
