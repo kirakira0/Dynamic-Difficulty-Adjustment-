@@ -5,18 +5,18 @@ using UnityEngine;
 public class HailSpawner : MonoBehaviour
 {
     public GameObject hail; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            Instantiate(hail, new Vector3(i * 2.0F, 0, 0), Quaternion.identity);
-        }   
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+    private float nextActionTime = 0.0f;
+    public float period = 0.1f;
+ 
+    void Update () {
+        if (Time.time > nextActionTime ) {
+            nextActionTime += period;
+            //for (int i = 0; i < 10; i++) {
+                Random rnd = new Random();
+                //Instantiate(hail, new Vector3(i * Random.Range(0f, 5f), Random.Range(0f, 2f), 0), Quaternion.identity);
+                Instantiate(hail, new Vector3(0.1f * Random.Range(0f, 100f), 0.0f, Quaternion.identity);
+            //} 
+        }
     }
 }
