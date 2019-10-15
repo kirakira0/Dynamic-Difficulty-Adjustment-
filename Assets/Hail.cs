@@ -20,5 +20,8 @@ public class Hail : MonoBehaviour
         if (col.tag == "Destroyer") {
             Destroy(gameObject, 0); 
         }
+        else if (col.tag == "Player") {
+            Debug.Log("hit!"); 
+        }
     }
 }

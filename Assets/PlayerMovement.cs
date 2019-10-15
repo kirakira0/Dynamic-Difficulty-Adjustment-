@@ -61,7 +61,6 @@ public class PlayerMovement : MonoBehaviour
         if (dashTime <= 0) {
             currentlyDashing = false; 
         }
- 
     }
 
     void Move() {
