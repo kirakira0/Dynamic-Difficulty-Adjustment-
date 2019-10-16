@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        Dash();
+        //Dash();
         if (Input.GetKeyDown(KeyCode.X) && !currentlyDashing) {
             dashTime = 0.8f; 
             currentlyDashing = true; 
@@ -45,24 +45,24 @@ public class PlayerMovement : MonoBehaviour
  
     }
 
-    void Dash() {
-        //TODO: make it so the player doesn't dash down if they're falling
-        if (currentlyDashing && dashTime > 0) {
-            //my_rigidbody2d.position = new Vector2(my_rigidbody2d.position.x + 0.1f, my_rigidbody2d.position.y); 
-            if (direction == "right") {
-                my_rigidbody2d.position = new Vector2(my_rigidbody2d.position.x + dashTime/2, my_rigidbody2d.position.y);
-            } 
-            else if (direction == "left") {
-                my_rigidbody2d.position = new Vector2(my_rigidbody2d.position.x - dashTime/2, my_rigidbody2d.position.y);
-            }
+    // void Dash() {
+    //     //TODO: make it so the player doesn't dash down if they're falling
+    //     if (currentlyDashing && dashTime > 0) {
+    //         //my_rigidbody2d.position = new Vector2(my_rigidbody2d.position.x + 0.1f, my_rigidbody2d.position.y); 
+    //         if (direction == "right") {
+    //             my_rigidbody2d.position = new Vector2(my_rigidbody2d.position.x + dashTime/2, my_rigidbody2d.position.y);
+    //         } 
+    //         else if (direction == "left") {
+    //             my_rigidbody2d.position = new Vector2(my_rigidbody2d.position.x - dashTime/2, my_rigidbody2d.position.y);
+    //         }
             
-            dashTime -= Time.deltaTime; 
-        }
-        if (dashTime <= 0) {
-            currentlyDashing = false; 
-        }
+    //         dashTime -= Time.deltaTime; 
+    //     }
+    //     if (dashTime <= 0) {
+    //         currentlyDashing = false; 
+    //     }
  
-    }
+    // }
 
     void Move() {
         //jump
