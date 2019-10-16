@@ -23,7 +23,7 @@ public class HailSpawner : MonoBehaviour
         }
         if (projectileSpeed < maxSpeed) {
             projectileSpeed += 0.1f * Time.deltaTime; //speeds up the projectiles over time
-            Debug.Log(projectileSpeed); 
+            //Debug.Log(projectileSpeed); 
         }
         hail.GetComponent<Rigidbody2D>().gravityScale = projectileSpeed; 
 
