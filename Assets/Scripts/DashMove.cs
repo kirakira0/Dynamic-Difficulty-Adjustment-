@@ -24,10 +24,10 @@ public class DashMove : MonoBehaviour
         if(direction == 0)
         {
             //TODO: Implement dash for right and left
-            if (Input.GetKeyDown(KeyCode.LeftArrow)){
+            if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.X)){
                 direction = 1;
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow)){
+            else if (Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.X)){
                 direction = 2;
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow)){
@@ -60,5 +60,6 @@ public class DashMove : MonoBehaviour
                 }
             }
         }    
+        Debug.Log(direction);
     }
 }
