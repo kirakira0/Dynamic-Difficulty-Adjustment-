@@ -396,6 +396,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   livesText: {fileID: 1783759944}
   lives: 10
+  hailspawner: {fileID: 2143537841}
+  platform: {fileID: 1777798519}
 --- !u!4 &601029200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2471867606852136643, guid: 6e1ec7eab4e9e6744b08c8acf1bfbaf1,
@@ -761,8 +763,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777798516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -7.6, z: 0}
-  m_LocalScale: {x: 3.8345873, y: 0.6114433, z: 1}
+  m_LocalPosition: {x: 0.063, y: -7.6, z: 0}
+  m_LocalScale: {x: 12.490286, y: 0.6114433, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -779,7 +781,7 @@ GameObject:
   - component: {fileID: 1783759945}
   - component: {fileID: 1783759944}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Lives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -801,8 +803,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -218.12, y: 185.47}
-  m_SizeDelta: {x: 108.18, y: 37.39}
+  m_AnchoredPosition: {x: -79.6, y: 140.5}
+  m_SizeDelta: {x: 385.1, y: 127.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1783759944
 MonoBehaviour:
@@ -826,7 +828,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d80fd934453ddb9429e3a7fccd340bfd, type: 3}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -979,8 +981,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143537839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13, y: 9.48, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.59, y: 9.48, z: 0}
+  m_LocalScale: {x: 8.617201, y: 1, z: 1}
   m_Children:
   - {fileID: 601029200}
   m_Father: {fileID: 0}
@@ -999,8 +1001,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hail: {fileID: 8297408680515582426, guid: 6e1ec7eab4e9e6744b08c8acf1bfbaf1, type: 3}
+  player: {fileID: 223624090}
+  platform: {fileID: 1777798519}
   period: 0.5
+  projectileSpeed: 1
   maxSpeed: 5
+  minPlatformWidth: 3
+  platformShrinkSpeed: 20
 --- !u!61 &2143537842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1014,7 +1021,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.18758011, y: 0}
+  m_Offset: {x: -0.18389297, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1025,7 +1032,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.3793335, y: 2.25}
+  m_Size: {x: 4.6527267, y: 2.25}
   m_EdgeRadius: 0
 --- !u!212 &2143537843
 SpriteRenderer:

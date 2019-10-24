@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameRoom.unity
     guid: 6e274031927223e4f8ba30ab15b667c3
   - enabled: 1
-    path: Assets/Scenes/Room2.unity
+    path: Assets/Scenes/HailRoom.unity
     guid: 34a56330a74e34d2c995a9fd4195b464
   m_configObjects: {}
