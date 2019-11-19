@@ -7,21 +7,21 @@ public class PlatformGenerator : MonoBehaviour
     public GameObject platform; 
     public Transform generationPoint; 
     public float distanceBetween; 
-    public float platformWidth; 
-    public float timeBeforeInitSpawn; 
-    public float timeBetweenSpawns;
- 
+    
+    private float platformWidth; 
 
     void Start()
     {
-        platformWidth = platform.GetComponent<BoxCollider2D>().size.x;
-        InvokeRepeating("SpawnPlatforms", timeBeforeInitSpawn, timeBetweenSpawns); //generate a platform every x seconds
+        //how wide should the platform be?
+        platformWidth = platform.GetComponent<BoxCollider2D>().size.x; 
     }
 
-    void SpawnPlatforms() {
-        transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z); 
-        Instantiate (platform, transform.position, transform.rotation);
+    void Update()
+    {
+        //create a new platform
+        if (transform.position.x < generationPoint.position.x) {
+            transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
+            Instantiate(platform, transform.position, transform.rotation); 
+        }
     }
-
-
 }
