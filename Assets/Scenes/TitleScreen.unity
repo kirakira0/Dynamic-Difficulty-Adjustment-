@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63dade97e611064e80b9cf612b6406c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetRoom: Room2
+  targetRoom: HailRoom
 --- !u!1 &1684594630
 GameObject:
   m_ObjectHideFlags: 0

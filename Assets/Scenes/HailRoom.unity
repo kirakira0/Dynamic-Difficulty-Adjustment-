@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 223624092}
   - component: {fileID: 223624091}
   - component: {fileID: 223624094}
+  - component: {fileID: 223624097}
   - component: {fileID: 223624095}
   - component: {fileID: 223624093}
   - component: {fileID: 223624096}
@@ -361,7 +362,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 2.25, y: 2.25}
   m_EdgeRadius: 0
@@ -398,6 +399,22 @@ MonoBehaviour:
   lives: 10
   hailspawner: {fileID: 2143537841}
   platform: {fileID: 1777798519}
+--- !u!114 &223624097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223624090}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6fec2774a022d478318a50dc56776d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTransform: {fileID: 186557102}
+  shakeDuration: 0
+  shakeAmount: 0.7
+  decreaseFactor: 1
 --- !u!4 &601029200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2471867606852136643, guid: 6e1ec7eab4e9e6744b08c8acf1bfbaf1,
