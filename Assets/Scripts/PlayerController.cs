@@ -29,5 +29,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow) && grounded) {
             playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, jumpForce);
         }
+        if (Input.GetKeyDown(KeyCode.DownArrow) && grounded) {
+            playerRigidbody.transform.localScale = new Vector3(playerRigidbody.transform.localScale.x, playerRigidbody.transform.localScale.y / 2, playerRigidbody.transform.localScale.z); 
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow) && grounded) {
+            playerRigidbody.transform.localScale = new Vector3(playerRigidbody.transform.localScale.x, playerRigidbody.transform.localScale.y * 2, playerRigidbody.transform.localScale.z); 
+        }
     }
 }
