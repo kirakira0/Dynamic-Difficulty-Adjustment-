@@ -16,11 +16,16 @@ public class PlatformGenerator : MonoBehaviour
     //public ObjectPooler theObjectPool; 
     public GameObject[] thePlatforms; 
     private int platformSelector; 
+    private float[] platformWidths; 
 
     void Start()
     {
         //how wide should the platform be?
-        platformWidth = platform.GetComponent<BoxCollider2D>().size.x; 
+        //platformWidth = platform.GetComponent<BoxCollider2D>().size.x; 
+        platformWidths = new float[thePlatforms.Length]; 
+        for (int i = 0; i < thePlatforms.Length; i++) {
+            platformWidths[i] = thePlatforms[i].GetComponent<BoxCollider2D>().size.x;
+        }
     }
 
     void Update()
@@ -28,9 +33,8 @@ public class PlatformGenerator : MonoBehaviour
         //create a new platform
         if (transform.position.x < generationPoint.position.x) {
             distanceBetween = Random.Range(distanceBetweenMin, distanceBetweenMax);
-            transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
-            
             platformSelector = Random.Range(0, thePlatforms.Length); 
+            transform.position = new Vector3(transform.position.x + platformWidths[platformSelector] + distanceBetween, transform.position.y, transform.position.z);
             Instantiate(thePlatforms[platformSelector], transform.position, transform.rotation); 
             
             /*
