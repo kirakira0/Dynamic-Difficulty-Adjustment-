@@ -13,6 +13,8 @@ public class PlatformGenerator : MonoBehaviour
     public float distanceBetweenMin;
     public float distanceBetweenMax; 
 
+    public ObjectPooler theObjectPool; 
+
     void Start()
     {
         //how wide should the platform be?
@@ -26,6 +28,12 @@ public class PlatformGenerator : MonoBehaviour
             distanceBetween = Random.Range(distanceBetweenMin, distanceBetweenMax);
             transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
             //Instantiate(platform, transform.position, transform.rotation); 
+            //get the platform 
+            GameObject newPlatform = theObjectPool.GetPooledObject();
+            //place it where it belongs
+            newPlatform.transform.position = transform.position; 
+            newPlatform.transform.rotation = transform.rotation; 
+            newPlatform.SetActive(true); 
         }
     }
 }
