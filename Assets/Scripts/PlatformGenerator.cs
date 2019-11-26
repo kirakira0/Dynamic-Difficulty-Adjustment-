@@ -25,7 +25,7 @@ public class PlatformGenerator : MonoBehaviour
         if (transform.position.x < generationPoint.position.x) {
             distanceBetween = Random.Range(distanceBetweenMin, distanceBetweenMax);
             transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
-            Instantiate(platform, transform.position, transform.rotation); 
+            //Instantiate(platform, transform.position, transform.rotation); 
         }
     }
 }
